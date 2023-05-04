@@ -5,6 +5,7 @@ import org.springframework.http.ProblemDetail;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.time.Instant;
 
@@ -41,6 +42,8 @@ public class GlobalExceptionHandler {
         problemDetail.setProperty("timestamp",Instant.now());
         return problemDetail;
     }
+
+
 
 
 }
