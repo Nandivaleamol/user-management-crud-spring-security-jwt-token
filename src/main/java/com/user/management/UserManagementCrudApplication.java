@@ -2,9 +2,10 @@ package com.user.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class UserManagementCrudApplication {
+public class UserManagementCrudApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserManagementCrudApplication.class, args);
