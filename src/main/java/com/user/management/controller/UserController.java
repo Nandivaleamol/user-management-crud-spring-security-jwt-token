@@ -36,6 +36,7 @@ import java.util.List;
         return ResponseEntity.ok(userService.getUserById(userId));
     }
 
+    // adding role based authentication
     @GetMapping
     @PreAuthorize("hasAuthority('ROLE_MANAGER') and hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<List<User>> getAllUsers(){
